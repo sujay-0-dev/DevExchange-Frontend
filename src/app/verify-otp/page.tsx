@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { OTPInput } from '@/components/auth/OTPInput';
 import { CountdownTimer } from '@/components/auth/CountdownTimer';
@@ -10,7 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { MailOpen } from 'lucide-react';
 import api from '@/lib/api';
 
-export default function VerifyOtpPage() {
+function VerifyOtpContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const requestId = searchParams.get('requestId');
@@ -95,5 +95,13 @@ export default function VerifyOtpPage() {
         </CardContent>
       </Card>
     </div>
+  );
+}
+
+export default function VerifyOtpPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-muted/30 px-4">Loading verification...</div>}>
+      <VerifyOtpContent />
+    </Suspense>
   );
 }
