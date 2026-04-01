@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "questions": "Preguntas",
+    "tags": "Etiquetas",
+    "users": "Usuarios",
+    "badges": "Insignias",
+    "community": "Espacio Comunitario",
+    "leaderboard": "Tabla de Clasificación",
+    "pricing": "Precios",
+    "login": "Iniciar Sesión",
+    "signup": "Registrarse"
+  },
+  "auth": {
+    "login": "Iniciar Sesión",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "noAccount": "¿No tienes una cuenta?",
+    "signUp": "Únete",
+    "logout": "Cerrar Sesión"
+  },
+  "questions": {
+    "askQuestion": "Hacer Pregunta",
+    "searchPlaceholder": "Buscar preguntas...",
+    "noQuestions": "No se encontraron preguntas",
+    "postedBy": "Publicado por",
+    "answers": "Respuestas",
+    "views": "Vistas",
+    "votes": "Votos",
+    "tags": "Etiquetas"
+  },
+  "language": {
+    "selectLanguage": "Seleccionar Idioma",
+    "verificationRequired": "Verificación Requerida",
+    "otpSentEmail": "Se ha enviado un OTP a su correo electrónico",
+    "otpSentMobile": "Se ha enviado un OTP a su número de teléfono",
+    "enterOtp": "Ingrese el OTP",
+    "verify": "Verificar y Cambiar",
+    "cancel": "Cancelar",
+    "invalidOtp": "OTP inválido. Por favor, inténtelo de nuevo.",
+    "expiredOtp": "El OTP ha expirado.",
+    "success": "¡Idioma cambiado con éxito!",
+    "switchingTo": "Cambiando a"
+  },
+  "profile": {
+    "points": "Puntos",
+    "reputation": "Reputación",
+    "badges": "Insignias",
+    "questions": "Preguntas",
+    "answers": "Respuestas",
+    "transferPoints": "Transferir Puntos",
+    "history": "Historial"
+  },
+  "subscription": {
+    "currentPlan": "Plan Actual",
+    "upgrade": "Mejorar",
+    "questionsLeft": "Preguntas restantes hoy",
+    "limitReached": "Límite diario alcanzado. Mejora tu plan."
+  },
+  "common": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "submit": "Enviar",
+    "loading": "Cargando...",
+    "error": "Algo salió mal",
+    "success": "Éxito"
+  }
+}

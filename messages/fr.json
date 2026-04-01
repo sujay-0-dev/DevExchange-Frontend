@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "questions": "Questions",
+    "tags": "Tags",
+    "users": "Utilisateurs",
+    "badges": "Badges",
+    "community": "Espace Communautaire",
+    "leaderboard": "Classement",
+    "pricing": "Tarification",
+    "login": "Se connecter",
+    "signup": "S'inscrire"
+  },
+  "auth": {
+    "login": "Connexion",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "forgotPassword": "Mot de passe oublié ?",
+    "noAccount": "Pas de compte ?",
+    "signUp": "S'inscrire",
+    "logout": "Se déconnecter"
+  },
+  "questions": {
+    "askQuestion": "Poser une question",
+    "searchPlaceholder": "Rechercher des questions...",
+    "noQuestions": "Aucune question trouvée",
+    "postedBy": "Posté par",
+    "answers": "Réponses",
+    "views": "Vues",
+    "votes": "Votes",
+    "tags": "Tags"
+  },
+  "language": {
+    "selectLanguage": "Sélectionner la langue",
+    "verificationRequired": "Vérification requise",
+    "otpSentEmail": "Un OTP a été envoyé à votre adresse e-mail",
+    "otpSentMobile": "Un OTP a été envoyé à votre numéro de mobile",
+    "enterOtp": "Entrer l'OTP",
+    "verify": "Vérifier et changer",
+    "cancel": "Annuler",
+    "invalidOtp": "OTP invalide. Veuillez réessayer.",
+    "expiredOtp": "L'OTP a expiré.",
+    "success": "Langue changée avec succès !",
+    "switchingTo": "Passage à"
+  },
+  "profile": {
+    "points": "Points",
+    "reputation": "Réputation",
+    "badges": "Badges",
+    "questions": "Questions",
+    "answers": "Réponses",
+    "transferPoints": "Transférer des points",
+    "history": "Historique"
+  },
+  "subscription": {
+    "currentPlan": "Plan Actuel",
+    "upgrade": "Mettre à niveau",
+    "questionsLeft": "Questions restantes aujourd'hui",
+    "limitReached": "Limite atteinte. Mettez à niveau."
+  },
+  "common": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "submit": "Soumettre",
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "success": "Succès"
+  }
+}

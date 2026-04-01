@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "questions": "Perguntas",
+    "tags": "Tags",
+    "users": "Usuários",
+    "badges": "Emblemas",
+    "community": "Espaço da Comunidade",
+    "leaderboard": "Placar",
+    "pricing": "Preços",
+    "login": "Entrar",
+    "signup": "Cadastrar"
+  },
+  "auth": {
+    "login": "Entrar",
+    "email": "E-mail",
+    "password": "Senha",
+    "forgotPassword": "Esqueceu a senha?",
+    "noAccount": "Não tem uma conta?",
+    "signUp": "Cadastrar",
+    "logout": "Sair"
+  },
+  "questions": {
+    "askQuestion": "Fazer Pergunta",
+    "searchPlaceholder": "Buscar perguntas...",
+    "noQuestions": "Nenhuma pergunta encontrada",
+    "postedBy": "Postado por",
+    "answers": "Respostas",
+    "views": "Visualizações",
+    "votes": "Votos",
+    "tags": "Tags"
+  },
+  "language": {
+    "selectLanguage": "Selecionar Idioma",
+    "verificationRequired": "Verificação Necessária",
+    "otpSentEmail": "Um OTP foi enviado para o seu e-mail",
+    "otpSentMobile": "Um OTP foi enviado para o seu celular",
+    "enterOtp": "Digite o OTP",
+    "verify": "Verificar e Trocar",
+    "cancel": "Cancelar",
+    "invalidOtp": "OTP inválido. Tente novamente.",
+    "expiredOtp": "O OTP expirou.",
+    "success": "Idioma alterado com sucesso!",
+    "switchingTo": "Mudando para"
+  },
+  "profile": {
+    "points": "Pontos",
+    "reputation": "Reputação",
+    "badges": "Emblemas",
+    "questions": "Perguntas",
+    "answers": "Respostas",
+    "transferPoints": "Transferir Pontos",
+    "history": "Histórico"
+  },
+  "subscription": {
+    "currentPlan": "Plano Atual",
+    "upgrade": "Fazer Upgrade",
+    "questionsLeft": "Perguntas restantes hoje",
+    "limitReached": "Limite alcançado. Faça upgrade."
+  },
+  "common": {
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "submit": "Enviar",
+    "loading": "Carregando...",
+    "error": "Algo deu errado",
+    "success": "Sucesso"
+  }
+}

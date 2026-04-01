@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "questions": "问题",
+    "tags": "标签",
+    "users": "用户",
+    "badges": "徽章",
+    "community": "社区空间",
+    "leaderboard": "排行榜",
+    "pricing": "定价",
+    "login": "登录",
+    "signup": "注册"
+  },
+  "auth": {
+    "login": "登录",
+    "email": "邮件信箱",
+    "password": "密码",
+    "forgotPassword": "忘记密码?",
+    "noAccount": "还没有账号?",
+    "signUp": "注册",
+    "logout": "登出"
+  },
+  "questions": {
+    "askQuestion": "提问",
+    "searchPlaceholder": "搜索问题...",
+    "noQuestions": "没有找到问题",
+    "postedBy": "发布者",
+    "answers": "回答",
+    "views": "浏览量",
+    "votes": "投票",
+    "tags": "标签"
+  },
+  "language": {
+    "selectLanguage": "选择语言",
+    "verificationRequired": "需要验证",
+    "otpSentEmail": "OTP已发送至您的电子邮箱",
+    "otpSentMobile": "OTP已发送至您的手机",
+    "enterOtp": "输入OTP",
+    "verify": "验证并切换",
+    "cancel": "取消",
+    "invalidOtp": "OTP无效，请重试。",
+    "expiredOtp": "OTP已过期。",
+    "success": "语言切换成功！",
+    "switchingTo": "正在切换至"
+  },
+  "profile": {
+    "points": "积分",
+    "reputation": "声望",
+    "badges": "徽章",
+    "questions": "问题",
+    "answers": "回答",
+    "transferPoints": "转账积分",
+    "history": "历史"
+  },
+  "subscription": {
+    "currentPlan": "当前计划",
+    "upgrade": "升级",
+    "questionsLeft": "今日剩余问题数",
+    "limitReached": "已达到今日限制。请升级以继续提问。"
+  },
+  "common": {
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "submit": "提交",
+    "loading": "加载中...",
+    "error": "出了些问题",
+    "success": "成功"
+  }
+}

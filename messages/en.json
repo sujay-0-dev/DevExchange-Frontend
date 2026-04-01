@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "questions": "Questions",
+    "tags": "Tags",
+    "users": "Users",
+    "badges": "Badges",
+    "community": "Community Space",
+    "leaderboard": "Leaderboard",
+    "pricing": "Pricing",
+    "login": "Log In",
+    "signup": "Sign Up"
+  },
+  "auth": {
+    "login": "Login",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign up",
+    "logout": "Logout"
+  },
+  "questions": {
+    "askQuestion": "Ask Question",
+    "searchPlaceholder": "Search questions...",
+    "noQuestions": "No questions found",
+    "postedBy": "Posted by",
+    "answers": "Answers",
+    "views": "Views",
+    "votes": "Votes",
+    "tags": "Tags"
+  },
+  "language": {
+    "selectLanguage": "Select Language",
+    "verificationRequired": "Verification Required",
+    "otpSentEmail": "An OTP has been sent to your email address",
+    "otpSentMobile": "An OTP has been sent to your mobile number",
+    "enterOtp": "Enter OTP",
+    "verify": "Verify & Switch",
+    "cancel": "Cancel",
+    "invalidOtp": "Invalid OTP. Please try again.",
+    "expiredOtp": "OTP has expired.",
+    "success": "Language switched successfully!",
+    "switchingTo": "Switching to"
+  },
+  "profile": {
+    "points": "Points",
+    "reputation": "Reputation",
+    "badges": "Badges",
+    "questions": "Questions",
+    "answers": "Answers",
+    "transferPoints": "Transfer Points",
+    "history": "History"
+  },
+  "subscription": {
+    "currentPlan": "Current Plan",
+    "upgrade": "Upgrade",
+    "questionsLeft": "Questions remaining today",
+    "limitReached": "Daily limit reached. Upgrade to post more."
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "success": "Success"
+  }
+}

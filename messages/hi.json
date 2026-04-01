@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "questions": "प्रश्न",
+    "tags": "टैग्स",
+    "users": "उपयोगकर्ता",
+    "badges": "बैज",
+    "community": "समुदाय",
+    "leaderboard": "लीडरबोर्ड",
+    "pricing": "कीमत",
+    "login": "लॉग इन",
+    "signup": "साइन अप"
+  },
+  "auth": {
+    "login": "लॉगिन",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "forgotPassword": "पासवर्ड भूल गए?",
+    "noAccount": "खाता नहीं है?",
+    "signUp": "साइन अप करें",
+    "logout": "लॉग आउट"
+  },
+  "questions": {
+    "askQuestion": "प्रश्न पूछें",
+    "searchPlaceholder": "प्रश्न खोजें...",
+    "noQuestions": "कोई प्रश्न नहीं मिला",
+    "postedBy": "द्वारा पोस्ट किया गया",
+    "answers": "उत्तर",
+    "views": "दृश्य",
+    "votes": "वोट",
+    "tags": "टैग"
+  },
+  "language": {
+    "selectLanguage": "भाषा चुनें",
+    "verificationRequired": "सत्यापन आवश्यक",
+    "otpSentEmail": "आपके ईमेल पर OTP भेज दिया गया है",
+    "otpSentMobile": "आपके मोबाइल पर OTP भेज दिया गया है",
+    "enterOtp": "OTP दर्ज करें",
+    "verify": "सत्यापित करें और बदलें",
+    "cancel": "रद्द करें",
+    "invalidOtp": "अमान्य OTP। कृपया पुनः प्रयास करें।",
+    "expiredOtp": "OTP समाप्त हो गया है।",
+    "success": "भाषा सफलतापूर्वक बदल दी गई!",
+    "switchingTo": "में बदल रहा है"
+  },
+  "profile": {
+    "points": "अंक",
+    "reputation": "प्रतिष्ठा",
+    "badges": "बैज",
+    "questions": "प्रश्न",
+    "answers": "उत्तर",
+    "transferPoints": "अंक ट्रांसफर करें",
+    "history": "इतिहास"
+  },
+  "subscription": {
+    "currentPlan": "वर्तमान योजना",
+    "upgrade": "अपग्रेड करें",
+    "questionsLeft": "आज शेष प्रश्न",
+    "limitReached": "दैनिक सीमा पूरी हुई। अपग्रेड करें।"
+  },
+  "common": {
+    "save": "सहेजें",
+    "cancel": "रद्द करें",
+    "delete": "हटाएं",
+    "edit": "संपादित करें",
+    "submit": "जमा करें",
+    "loading": "लोड हो रहा है...",
+    "error": "कुछ गलत हो गया",
+    "success": "सफल"
+  }
+}
