@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -10,7 +10,7 @@ import { KeyRound, Wand2 } from 'lucide-react';
 import api from '@/lib/api';
 import { toast } from 'sonner';
 
-export default function SetNewPasswordPage() {
+function SetNewPasswordContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const requestId = searchParams.get('requestId');
@@ -125,5 +125,13 @@ export default function SetNewPasswordPage() {
         </CardContent>
       </Card>
     </div>
+  );
+}
+
+export default function SetNewPasswordPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-muted/30 px-4">Loading secure environment...</div>}>
+      <SetNewPasswordContent />
+    </Suspense>
   );
 }
