@@ -38,7 +38,7 @@ export function useSocialFeed() {
   useEffect(() => {
     fetchPosts(1, true);
 
-    const socket = io(process.env.NEXT_PUBLIC_API_URL?.replace('/api', '') || 'http://localhost:5000');
+    const socket = io(process.env.NEXT_PUBLIC_API_URL?.replace('/api', '') || 'https://devexchange.onrender.com');
     
     socket.on('new_social_post', (data) => {
       setPosts(prev => {

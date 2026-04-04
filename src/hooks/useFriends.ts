@@ -51,7 +51,7 @@ export function useFriends() {
     fetchFriendsAndRequests();
 
     if (user) {
-      const socket = io(process.env.NEXT_PUBLIC_API_URL?.replace('/api', '') || 'http://localhost:5000');
+      const socket = io(process.env.NEXT_PUBLIC_API_URL?.replace('/api', '') || 'https://devexchange.onrender.com');
       
       socket.on('friend_request', () => {
         fetchFriendsAndRequests();
