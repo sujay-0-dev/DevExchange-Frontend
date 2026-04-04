@@ -49,8 +49,9 @@ export default function RegisterPage() {
     setError('');
 
     try {
+      const identifier = method === 'email' ? email : phone;
       const res = await api.post('/auth/register-otp', { 
-        identifier: method === 'email' ? email : phone,
+        identifier,
         identifierType: method
       });
       
@@ -59,10 +60,7 @@ export default function RegisterPage() {
       expiry.setMinutes(expiry.getMinutes() + 10);
       setExpiresAt(expiry);
       setStep(2);
-      toast.success('Verification OTP sent successfully!');
-      if (res.data.otp) {
-        toast('MOCK OTP (Dev): ' + res.data.otp, { duration: 10000 });
-      }
+      toast.success(`Verification OTP sent to your ${method}!`);
     } catch (err: any) {
       if (err.response?.status === 429) {
         setError('Rate limit exceeded. Try again in an hour.');
@@ -73,6 +71,8 @@ export default function RegisterPage() {
       setLoading(false);
     }
   };
+
+
 
   const handleVerifyAndRegister = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -85,13 +85,20 @@ export default function RegisterPage() {
     setError('');
 
     try {
+      let clientIp = undefined;
+      try {
+        const ipRes = await fetch('https://api.ipify.org?format=json');
+        clientIp = (await ipRes.json()).ip;
+      } catch (err) {}
+
       const res = await api.post('/auth/register', { 
         name, 
         email, 
         phone: phone || undefined, 
         password, 
         requestId, 
-        otp 
+        otp,
+        clientIp
       });
       
       toast.success('Registration successful. Welcome to DevExchange!');
@@ -107,7 +114,7 @@ export default function RegisterPage() {
     <div className="flex min-h-[calc(100vh-4rem)] w-full items-center justify-center py-12 px-4 shadow-sm">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <CardTitle className="text-2xl">{step === 1 ? t('auth.signUp') : 'Verify Account'}</CardTitle>
+          <CardTitle className="text-2xl">{step === 1 ? t('register.title') : 'Verify Account'}</CardTitle>
           <CardDescription>
             {step === 1 ? 'Configure your profile and choose a verification method.' : `Enter the 6-digit OTP sent to your ${method}`}
           </CardDescription>
@@ -116,7 +123,7 @@ export default function RegisterPage() {
           {step === 1 ? (
             <form onSubmit={handleSendOTP} className="grid gap-4">
               <div className="grid gap-2">
-                <label htmlFor="name" className="text-sm font-medium">Full Name</label>
+                <label htmlFor="name" className="text-sm font-medium">{t('register.name')}</label>
                 <Input
                   id="name"
                   placeholder="John Doe"
@@ -126,7 +133,7 @@ export default function RegisterPage() {
                 />
               </div>
               <div className="grid gap-2">
-                <label htmlFor="email" className="text-sm font-medium">Email Address <span className="text-red-500">*</span></label>
+                <label htmlFor="email" className="text-sm font-medium">{t('register.email')} <span className="text-red-500">*</span></label>
                 <Input
                   id="email"
                   type="email"
@@ -137,7 +144,7 @@ export default function RegisterPage() {
                 />
               </div>
               <div className="grid gap-2">
-                <label htmlFor="phone" className="text-sm font-medium">Phone Number (Optional)</label>
+                <label htmlFor="phone" className="text-sm font-medium">{t('register.phone')}</label>
                 <Input
                   id="phone"
                   type="tel"
@@ -147,7 +154,7 @@ export default function RegisterPage() {
                 />
               </div>
               <div className="grid gap-2">
-                <label htmlFor="password" className="text-sm font-medium">Password</label>
+                <label htmlFor="password" className="text-sm font-medium">{t('register.password')}</label>
                 <Input
                   id="password"
                   type="password"
@@ -165,7 +172,7 @@ export default function RegisterPage() {
               {error && <WarningBanner message={error} type="error" />}
 
               <Button type="submit" className="w-full h-12" disabled={loading}>
-                {loading ? 'Generating Security Token...' : `Verify via ${method === 'email' ? 'Email' : 'SMS'}`}
+                {loading ? 'Processing...' : `Continue via ${method === 'email' ? 'Email' : 'SMS'}`}
               </Button>
             </form>
           ) : (
@@ -179,7 +186,7 @@ export default function RegisterPage() {
               {error && <WarningBanner message={error} type="error" />}
 
               <Button type="submit" className="w-full h-12 mt-2" disabled={loading || otp.length !== 6}>
-                {loading ? 'Finalizing Profile...' : 'Complete Registration'}
+                {loading ? t('common.loading') : t('register.registerButton')}
               </Button>
               <Button type="button" variant="ghost" className="w-full" onClick={() => setStep(1)} disabled={loading}>
                 ← Back to Edit
@@ -190,9 +197,9 @@ export default function RegisterPage() {
         {step === 1 && (
           <CardFooter>
             <p className="text-center text-sm text-muted-foreground w-full">
-              Already have an account?{' '}
+              {t('register.hasAccount')}{' '}
               <Link href="/login" className="underline hover:text-primary">
-                {t('auth.login')}
+                {t('register.login')}
               </Link>
             </p>
           </CardFooter>

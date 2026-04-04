@@ -28,7 +28,7 @@ export default function TagsPage() {
   }, []);
 
   return (
-    <div className="flex flex-col w-full px-4 py-6 md:px-8 max-w-6xl mx-auto">
+    <div className="max-w-5xl mx-auto px-6 py-6 w-full">
       <div className="mb-6">
         <h1 className="text-3xl font-bold mb-2">{t('nav.tags')}</h1>
         <p className="text-muted-foreground max-w-2xl">
@@ -53,7 +53,7 @@ export default function TagsPage() {
                   </Badge>
                 </CardTitle>
                 <CardDescription className="text-xs">
-                  {tag.count} {tag.count === 1 ? 'question' : 'questions'}
+                  {tag.count} {t('tags.questions')}
                 </CardDescription>
               </CardHeader>
             </Card>

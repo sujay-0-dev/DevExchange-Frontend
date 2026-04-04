@@ -16,12 +16,15 @@ export function Navbar() {
   const { t } = useTranslation();
   return (
     <nav className="fixed top-0 w-full z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center">
+      <div className="container mx-auto flex h-14 items-center">
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <span className="font-bold sm:inline-block">DevExchange</span>
           </Link>
           <div className="hidden md:flex items-center gap-6">
+            <Link href="/about" className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
+              {t('nav.about')}
+            </Link>
             <Link href="/social" className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
               {t('nav.community')}
             </Link>

@@ -7,13 +7,6 @@ import pt from './messages/pt.json';
 import zh from './messages/zh.json';
 import fr from './messages/fr.json';
 
-const getInitialLang = () => {
-  if (typeof window !== 'undefined') {
-    return localStorage.getItem('devexchange_lang') || 'en';
-  }
-  return 'en';
-};
-
 i18n
   .use(initReactI18next)
   .init({
@@ -25,10 +18,10 @@ i18n
       zh: { translation: zh },
       fr: { translation: fr }
     },
-    lng: getInitialLang(),
+    lng: 'en',
     fallbackLng: 'en',
     interpolation: {
-      escapeValue: false // not needed for react as it escapes by default
+      escapeValue: false
     }
   });
 

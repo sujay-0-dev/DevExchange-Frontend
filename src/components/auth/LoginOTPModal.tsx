@@ -8,8 +8,10 @@ import { OTPInput } from "@/components/auth/OTPInput";
 import { CountdownTimer } from "@/components/auth/CountdownTimer";
 import { WarningBanner } from "@/components/auth/WarningBanner";
 import { useAuth } from '@/lib/auth';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-export function LoginOTPModal({ open, onOpenChange, otpRequestId, onVerifySuccess }: any) {
+export function LoginOTPModal({ open, onOpenChange, otpRequestId, phoneOtpRequestId, userId, userPhone, onVerifySuccess }: any) {
+  const [tab, setTab] = useState('email');
   const [loading, setLoading] = useState(false);
   const [otp, setOtp] = useState("");
   const [error, setError] = useState("");
@@ -40,6 +42,29 @@ export function LoginOTPModal({ open, onOpenChange, otpRequestId, onVerifySucces
     }
   };
 
+  const handlePhoneVerify = async () => {
+    if (!otp || otp.length !== 6 || !phoneOtpRequestId) {
+      setError("Invalid OTP");
+      return;
+    }
+
+    setLoading(true);
+    setError("");
+    try {
+      const res = await api.post("/auth/verify-login-phone-otp", {
+        phoneOtpRequestId,
+        otp
+      });
+      toast.success(res.data.message || "Login successful!");
+      login(res.data.token, res.data.user);
+      if (onVerifySuccess) onVerifySuccess();
+    } catch (err: any) {
+      setError(err.response?.data?.message || "Invalid OTP Verification");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const expiresAt = new Date();
   expiresAt.setMinutes(expiresAt.getMinutes() + 10);
 
@@ -56,23 +81,56 @@ export function LoginOTPModal({ open, onOpenChange, otpRequestId, onVerifySucces
         </DialogHeader>
 
         <div className="flex flex-col gap-4 mt-2">
-          <OTPInput length={6} onChange={setOtp} />
+          <Tabs value={tab} onValueChange={setTab} className="w-full">
+            {userPhone && (
+              <TabsList className="grid w-full grid-cols-2 mb-4">
+                <TabsTrigger value="email">📧 Email OTP</TabsTrigger>
+                <TabsTrigger value="phone">📱 Phone OTP</TabsTrigger>
+              </TabsList>
+            )}
 
-          <div className="mb-2 text-center">
-            <CountdownTimer expiresAt={expiresAt} onExpire={() => setError('OTP has expired. Please go back and try again.')} />
-          </div>
+            <TabsContent value="email" className="flex flex-col gap-4">
+              <OTPInput length={6} onChange={setOtp} />
 
-          {error && <WarningBanner message={error} type="error" />}
+              <div className="mb-2 text-center">
+                <CountdownTimer expiresAt={expiresAt} onExpire={() => setError('OTP has expired. Please go back and try again.')} />
+              </div>
 
-          <div className="flex justify-end gap-2 mt-4">
-            <Button variant="outline" onClick={() => onOpenChange(false)} disabled={loading}>
-              Cancel
-            </Button>
-            <Button onClick={handleVerify} disabled={loading || otp.length !== 6}>
-              {loading && <Loader2 className="h-4 w-4 animate-spin mr-2" />}
-              Verify & Login →
-            </Button>
-          </div>
+              {error && tab === 'email' && <WarningBanner message={error} type="error" />}
+
+              <div className="flex justify-end gap-2 mt-4">
+                <Button variant="outline" onClick={() => onOpenChange(false)} disabled={loading}>
+                  Cancel
+                </Button>
+                <Button onClick={handleVerify} disabled={loading || otp.length !== 6}>
+                  {loading && <Loader2 className="h-4 w-4 animate-spin mr-2" />}
+                  Verify & Login →
+                </Button>
+              </div>
+            </TabsContent>
+
+            {userPhone && (
+              <TabsContent value="phone" className="flex flex-col gap-4">
+                <OTPInput length={6} onChange={setOtp} />
+
+                <div className="mb-2 text-center">
+                  <CountdownTimer expiresAt={expiresAt} onExpire={() => setError('OTP has expired. Please go back and try again.')} />
+                </div>
+
+                {error && tab === 'phone' && <WarningBanner message={error} type="error" />}
+                
+                <div className="flex justify-end gap-2 mt-4">
+                  <Button variant="outline" onClick={() => onOpenChange(false)} disabled={loading}>
+                    Cancel
+                  </Button>
+                  <Button onClick={handlePhoneVerify} disabled={loading || otp.length !== 6}>
+                    {loading && <Loader2 className="h-4 w-4 animate-spin mr-2" />}
+                    Verify & Login →
+                  </Button>
+                </div>
+              </TabsContent>
+            )}
+          </Tabs>
         </div>
       </DialogContent>
     </Dialog>

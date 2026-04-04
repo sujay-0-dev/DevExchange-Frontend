@@ -20,6 +20,9 @@ export default function LoginPage() {
   
   const [showLoginOtpModal, setShowLoginOtpModal] = useState(false);
   const [otpRequestId, setOtpRequestId] = useState<string | null>(null);
+  const [phoneOtpRequestId, setPhoneOtpRequestId] = useState<string | null>(null);
+  const [userId, setUserId] = useState<string | null>(null);
+  const [userPhone, setUserPhone] = useState<string | null>(null);
   const [mobileBlocked, setMobileBlocked] = useState(false);
   const [blockedData, setBlockedData] = useState<any>(null);
 
@@ -30,14 +33,20 @@ export default function LoginPage() {
     setLoading(true);
 
     try {
-      const res = await api.post('/auth/login', { email, password });
+      let clientIp = undefined;
+      try {
+        const ipRes = await fetch('https://api.ipify.org?format=json');
+        clientIp = (await ipRes.json()).ip;
+      } catch (err) {}
+
+      const res = await api.post('/auth/login', { email, password, clientIp });
       
       if (res.data.requiresOtp) {
         setOtpRequestId(res.data.otpRequestId);
+        setPhoneOtpRequestId(res.data.phoneOtpRequestId || null);
+        setUserId(res.data.userId);
+        setUserPhone(res.data.hasPhone ? 'true' : null);
         setShowLoginOtpModal(true);
-        if (res.data.otp) {
-          toast('MOCK OTP (Dev): ' + res.data.otp, { duration: 10000 });
-        }
       } else {
         login(res.data.token, res.data.user);
         toast.success('Login successful');
@@ -73,12 +82,15 @@ export default function LoginPage() {
         open={showLoginOtpModal} 
         onOpenChange={setShowLoginOtpModal} 
         otpRequestId={otpRequestId}
+        phoneOtpRequestId={phoneOtpRequestId}
+        userId={userId}
+        userPhone={userPhone}
         onVerifySuccess={() => setShowLoginOtpModal(false)}
       />
       <Card className="w-full max-w-sm">
         <CardHeader>
           <CardTitle className="text-2xl">{t('auth.login')}</CardTitle>
-          <CardDescription>Enter your email below to login to your account.</CardDescription>
+          <CardDescription>{t('login.subtitle')}</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleLogin} className="grid gap-4">

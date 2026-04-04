@@ -73,18 +73,18 @@ export default function PricingPage() {
   };
 
   return (
-    <div className="container py-10 max-w-6xl mx-auto">
+    <div className="max-w-5xl mx-auto px-6 py-6 w-full">
       <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
       
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold mb-4">Pricing Plans</h1>
+        <h1 className="text-4xl font-bold mb-4">{t('pricing.title')}</h1>
         <p className="text-muted-foreground text-lg mb-4">
-          Upgrade your plan to post more questions and boost your productivity.
+          {t('pricing.subtitle')}
         </p>
         {!isPaymentWindow && (
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-orange-500/10 text-orange-500 border border-orange-500/20">
             <span className="text-xl">⏰</span>
-            <p><strong>Payment Window Closed:</strong> Payments are accepted between 10:00 AM – 11:00 AM IST only.</p>
+            <p><strong>Payment Window Closed:</strong> {t('pricing.paymentWindow')}</p>
           </div>
         )}
       </div>
@@ -97,30 +97,30 @@ export default function PricingPage() {
             <Card key={plan.planId} className={`relative flex flex-col ${isCurrentPlan ? 'border-primary shadow-lg ring-1 ring-primary' : ''}`}>
               {isCurrentPlan && (
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                  <Badge variant="default">Current Plan</Badge>
+                  <Badge variant="default">{t('pricing.currentPlan')}</Badge>
                 </div>
               )}
               <CardHeader className="text-center pb-2">
                 <CardTitle className="text-2xl">{plan.name}</CardTitle>
                 <div className="mt-4 flex items-baseline justify-center gap-x-2">
                   <span className="text-4xl font-bold tracking-tight text-primary">₹{plan.price}</span>
-                  <span className="text-sm font-semibold leading-6 text-muted-foreground">/mo</span>
+                  <span className="text-sm font-semibold leading-6 text-muted-foreground">{t('pricing.perMonth')}</span>
                 </div>
               </CardHeader>
               <CardContent className="flex-1 text-center mt-4">
                 <ul className="space-y-3 text-sm text-muted-foreground">
                   <li className="flex justify-center items-center gap-2">
-                    <span className="font-semibold text-foreground">{plan.questionsPerDay}</span> Questions / day
+                    <span className="font-semibold text-foreground">{plan.name.toLowerCase() === 'unlimited' ? t('pricing.unlimited') : plan.questionsPerDay}</span> {t('pricing.questionsPerDay')}
                   </li>
                   <li className="text-xs mt-4">
-                    ⏰ Payments accepted: 10:00 AM – 11:00 AM IST only
+                    ⏰ {t('pricing.paymentWindow')}
                   </li>
                 </ul>
               </CardContent>
               <CardFooter>
                 {plan.name.toLowerCase() === 'free' ? (
                   <Button className="w-full" variant="outline" disabled>
-                    {isCurrentPlan ? t('subscription.currentPlan') : "Free Forever"}
+                    {isCurrentPlan ? t('pricing.currentPlan') : t('pricing.free')}
                   </Button>
                 ) : (
                   <Button 
@@ -130,7 +130,7 @@ export default function PricingPage() {
                     onClick={() => handleUpgrade(plan)}
                     title={!isPaymentWindow ? "Payment window is closed. Come back between 10-11 AM IST." : ""}
                   >
-                    {isCurrentPlan ? t('subscription.currentPlan') : t('subscription.upgrade')}
+                    {isCurrentPlan ? t('pricing.currentPlan') : t('pricing.upgrade')}
                   </Button>
                 )}
               </CardFooter>

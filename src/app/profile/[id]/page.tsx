@@ -60,7 +60,7 @@ export default function ProfilePage() {
   const { user, stats, recentQuestions } = data;
 
   return (
-    <div className="flex flex-col w-full max-w-5xl px-4 py-6 md:px-8 mx-auto gap-8">
+    <div className="max-w-5xl mx-auto px-6 py-6 w-full">
       {/* Profile Header */}
       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
         <Avatar className="h-32 w-32 border-4 border-background shadow-sm">
@@ -71,7 +71,7 @@ export default function ProfilePage() {
         <div className="flex flex-col items-center sm:items-start flex-1 w-full gap-4">
           <div>
             <h1 className="text-3xl font-bold">{user.name}</h1>
-            <p className="text-muted-foreground">Member for {formatDistanceToNow(new Date(user.createdAt))}</p>
+            <p className="text-muted-foreground">{t('profile.memberSince')} {formatDistanceToNow(new Date(user.createdAt))}</p>
           </div>
           
           <div className="flex flex-wrap gap-4 mt-2">
@@ -128,7 +128,7 @@ export default function ProfilePage() {
                     className="w-full border-primary/50 hover:bg-primary/10" 
                     onClick={() => setIsTransferModalOpen(true)}
                   >
-                    Send Points →
+                    {t('profile.transferPoints')} →
                   </Button>
                 </div>
               )}
@@ -177,7 +177,7 @@ export default function ProfilePage() {
         <div className="md:col-span-2 space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle>Recent Questions</CardTitle>
+              <CardTitle>{t('profile.questions')}</CardTitle>
               <CardDescription>The most recent questions asked by {user.name}</CardDescription>
             </CardHeader>
             <CardContent className="p-0">

@@ -17,6 +17,7 @@ export function LanguageVerificationModal() {
   const [otp, setOtp] = useState("");
   const [requestId, setRequestId] = useState<string | null>(null);
   const [method, setMethod] = useState<"email" | "mobile" | null>(null);
+  const [userPhone, setUserPhone] = useState<string | null>(null);
 
   const getLanguageName = (code: string) => {
     const names: Record<string, string> = {
@@ -33,8 +34,9 @@ export function LanguageVerificationModal() {
           const res = await api.post("/language/request-switch", {
             targetLanguage: pendingLanguage
           });
-          setRequestId(res.data.requestId);
+          setRequestId(res.data.requestId || null);
           setMethod(res.data.method);
+          setUserPhone(res.data.userPhone || null);
           toast.success(res.data.message);
           if (res.data.otp) {
             toast('MOCK OTP (Dev): ' + res.data.otp, { duration: 10000 });
@@ -90,31 +92,39 @@ export function LanguageVerificationModal() {
         </DialogHeader>
 
         <div className="flex flex-col gap-4 mt-2">
-          <p className="text-sm text-center font-medium bg-muted/50 p-3 rounded-md">
-            {method === 'email' ? '📧 ' + t('language.otpSentEmail') : '📱 ' + t('language.otpSentMobile')}
-          </p>
+          {method === null ? (
+            <div className="flex justify-center p-8">
+              <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+            </div>
+          ) : (
+            <>
+              <p className="text-sm text-center font-medium bg-muted/50 p-3 rounded-md">
+                {method === 'email' ? '📧 ' + t('language.otpSentEmail') : '📱 ' + t('language.otpSentMobile')}
+              </p>
 
-          <div className="space-y-2 mt-2">
-            <label className="text-xs font-semibold text-muted-foreground uppercase">{t('language.enterOtp')}</label>
-            <Input 
-              type="text" 
-              maxLength={6} 
-              placeholder="000000"
-              className="text-center text-lg tracking-[0.5em] font-mono"
-              value={otp}
-              onChange={(e) => setOtp(e.target.value.replace(/\\D/g, ''))}
-            />
-          </div>
+              <div className="space-y-2 mt-2">
+                <label className="text-xs font-semibold text-muted-foreground uppercase">{t('language.enterOtp')}</label>
+                <Input 
+                  type="text" 
+                  maxLength={6} 
+                  placeholder="000000"
+                  className="text-center text-lg tracking-[0.5em] font-mono"
+                  value={otp}
+                  onChange={(e) => setOtp(e.target.value.replace(/\D/g, ''))}
+                />
+              </div>
 
-          <div className="flex justify-end gap-2 mt-4">
-            <Button variant="outline" onClick={() => setPendingLanguage(null)} disabled={loading}>
-              {t('common.cancel')}
-            </Button>
-            <Button onClick={handleVerify} disabled={loading || otp.length !== 6}>
-              {loading && <Loader2 className="h-4 w-4 animate-spin mr-2" />}
-              {t('language.verify')}
-            </Button>
-          </div>
+              <div className="flex justify-end gap-2 mt-4">
+                <Button variant="outline" onClick={() => setPendingLanguage(null)} disabled={loading}>
+                  {t('common.cancel')}
+                </Button>
+                <Button onClick={handleVerify} disabled={loading || otp.length !== 6}>
+                  {loading && <Loader2 className="h-4 w-4 animate-spin mr-2" />}
+                  {t('language.verify')}
+                </Button>
+              </div>
+            </>
+          )}
         </div>
       </DialogContent>
     </Dialog>

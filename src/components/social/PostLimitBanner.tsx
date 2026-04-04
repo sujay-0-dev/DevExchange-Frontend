@@ -6,8 +6,10 @@ import { useAuth } from '@/lib/auth';
 import { useFriends } from '@/hooks/useFriends';
 import { useEffect, useState } from 'react';
 import api from '@/lib/api';
+import { useTranslation } from 'react-i18next';
 
 export function PostLimitBanner() {
+  const { t } = useTranslation();
   const { user } = useAuth();
   const { friends, loading } = useFriends();
   const [postsToday, setPostsToday] = useState(0);
@@ -36,7 +38,7 @@ export function PostLimitBanner() {
         <Lock className="h-4 w-4" />
         <AlertTitle>Posting Locked</AlertTitle>
         <AlertDescription>
-          You must connect with at least 1 friend to start posting to the timeline.
+          {t('community.noFriends')}
         </AlertDescription>
       </Alert>
     );
@@ -57,12 +59,12 @@ export function PostLimitBanner() {
   const remaining = friendCount - postsToday;
 
   return (
-    <Alert className="mb-6 bg-accent border-accent text-accent-foreground">
-      <Info className="h-4 w-4" />
-      <AlertTitle>Daily Posting Limit Active</AlertTitle>
-      <AlertDescription>
-        You have {friendCount} friend{friendCount === 1 ? '' : 's'}. You currently have {Math.max(0, remaining)} post{remaining === 1 ? '' : 's'} remaining today. Add more friends to post more!
-      </AlertDescription>
-    </Alert>
+      <Alert className="mb-6 bg-accent border-accent text-accent-foreground">
+        <Info className="h-4 w-4" />
+        <AlertTitle>{t('community.limitReached')}</AlertTitle>
+        <AlertDescription>
+          You have {friendCount} friend{friendCount === 1 ? '' : 's'}. You currently have {Math.max(0, remaining)} post{remaining === 1 ? '' : 's'} remaining today. Add more friends to post more!
+        </AlertDescription>
+      </Alert>
   );
 }

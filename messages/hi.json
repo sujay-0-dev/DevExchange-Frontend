@@ -1,61 +1,108 @@
 {
   "nav": {
+    "about": "हमारे बारे में",
     "questions": "प्रश्न",
-    "tags": "टैग्स",
+    "tags": "टैग",
     "users": "उपयोगकर्ता",
     "badges": "बैज",
     "community": "समुदाय",
     "leaderboard": "लीडरबोर्ड",
-    "pricing": "कीमत",
+    "pricing": "मूल्य निर्धारण",
     "login": "लॉग इन",
-    "signup": "साइन अप"
+    "signup": "साइन अप",
+    "logout": "लॉग आउट",
+    "profile": "प्रोफ़ाइल",
+    "searchPlaceholder": "प्रश्न खोजें..."
   },
-  "auth": {
-    "login": "लॉगिन",
-    "email": "ईमेल",
-    "password": "पासवर्ड",
-    "forgotPassword": "पासवर्ड भूल गए?",
-    "noAccount": "खाता नहीं है?",
-    "signUp": "साइन अप करें",
-    "logout": "लॉग आउट"
-  },
-  "questions": {
+  "home": {
+    "topQuestions": "शीर्ष प्रश्न",
     "askQuestion": "प्रश्न पूछें",
-    "searchPlaceholder": "प्रश्न खोजें...",
-    "noQuestions": "कोई प्रश्न नहीं मिला",
-    "postedBy": "द्वारा पोस्ट किया गया",
-    "answers": "उत्तर",
-    "views": "दृश्य",
+    "noQuestions": "कोई प्रश्न नहीं",
     "votes": "वोट",
-    "tags": "टैग"
+    "answers": "उत्तर",
+    "postedBy": "द्वारा पोस्ट",
+    "ago": "पहले"
   },
-  "language": {
-    "selectLanguage": "भाषा चुनें",
-    "verificationRequired": "सत्यापन आवश्यक",
-    "otpSentEmail": "आपके ईमेल पर OTP भेज दिया गया है",
-    "otpSentMobile": "आपके मोबाइल पर OTP भेज दिया गया है",
-    "enterOtp": "OTP दर्ज करें",
-    "verify": "सत्यापित करें और बदलें",
-    "cancel": "रद्द करें",
-    "invalidOtp": "अमान्य OTP। कृपया पुनः प्रयास करें।",
-    "expiredOtp": "OTP समाप्त हो गया है।",
-    "success": "भाषा सफलतापूर्वक बदल दी गई!",
-    "switchingTo": "में बदल रहा है"
+  "question": {
+    "title": "शीर्षक",
+    "description": "विवरण",
+    "tags": "टैग",
+    "submit": "प्रश्न पोस्ट करें",
+    "answers": "उत्तर",
+    "postAnswer": "अपना उत्तर पोस्ट करें",
+    "submitAnswer": "उत्तर भेजें",
+    "acceptAnswer": "उत्तर स्वीकार करें",
+    "accepted": "स्वीकृत",
+    "noAnswers": "कोई उत्तर नहीं"
   },
   "profile": {
     "points": "अंक",
     "reputation": "प्रतिष्ठा",
     "badges": "बैज",
-    "questions": "प्रश्न",
-    "answers": "उत्तर",
-    "transferPoints": "अंक ट्रांसफर करें",
-    "history": "इतिहास"
+    "questions": "पूछे गए प्रश्न",
+    "answers": "दिए गए उत्तर",
+    "transferPoints": "अंक स्थानांतरित करें",
+    "loginHistory": "लॉगिन इतिहास",
+    "memberSince": "सदस्य",
+    "editProfile": "प्रोफ़ाइल संपादित करें"
   },
-  "subscription": {
+  "login": {
+    "title": "लॉग इन",
+    "subtitle": "ईमेल दर्ज करें",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "forgotPassword": "पासवर्ड भूल गए?",
+    "loginButton": "लॉग इन",
+    "noAccount": "खाता नहीं है?",
+    "signUp": "साइन अप"
+  },
+  "register": {
+    "title": "खाता बनाएं",
+    "name": "पूरा नाम",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "phone": "फोन नंबर",
+    "registerButton": "साइन अप करें",
+    "hasAccount": "पहले से खाता है?",
+    "login": "लॉग इन"
+  },
+  "pricing": {
+    "title": "अपनी योजना चुनें",
+    "subtitle": "अधिक प्रश्न पूछने के लिए अपग्रेड करें",
+    "free": "मुफ्त",
+    "bronze": "कांस्य",
+    "silver": "चांदी",
+    "gold": "सोना",
+    "perMonth": "/महीना",
+    "questionsPerDay": "प्रश्न प्रति दिन",
+    "unlimited": "असीमित",
     "currentPlan": "वर्तमान योजना",
-    "upgrade": "अपग्रेड करें",
-    "questionsLeft": "आज शेष प्रश्न",
-    "limitReached": "दैनिक सीमा पूरी हुई। अपग्रेड करें।"
+    "upgrade": "अपग्रेड",
+    "paymentWindow": "भुगतान: 10-11 AM IST"
+  },
+  "leaderboard": {
+    "title": "लीडरबोर्ड",
+    "rank": "रैंक",
+    "user": "उपयोगकर्ता",
+    "points": "अंक",
+    "level": "स्तर"
+  },
+  "community": {
+    "title": "सामुदायिक स्थान",
+    "createPost": "पोस्ट बनाएं",
+    "like": "पसंद",
+    "comment": "टिप्पणी",
+    "share": "साझा करें",
+    "noFriends": "पोस्ट करने के लिए कम से कम 1 मित्र जोड़ें",
+    "limitReached": "दैनिक सीमा पूरी हुई"
+  },
+  "tags": {
+    "title": "टैग",
+    "questions": "प्रश्न"
+  },
+  "users": {
+    "title": "उपयोगकर्ता",
+    "reputation": "प्रतिष्ठा"
   },
   "common": {
     "save": "सहेजें",
@@ -64,7 +111,37 @@
     "edit": "संपादित करें",
     "submit": "जमा करें",
     "loading": "लोड हो रहा है...",
-    "error": "कुछ गलत हो गया",
-    "success": "सफल"
+    "error": "कुछ गलत हुआ",
+    "success": "सफलता",
+    "close": "बंद करें",
+    "back": "वापस",
+    "next": "अगला",
+    "search": "खोज"
+  },
+  "language": {
+    "selectLanguage": "भाषा चुनें",
+    "verificationRequired": "सत्यापन आवश्यक",
+    "otpSentEmail": "OTP ईमेल पर भेजा गया",
+    "otpSentMobile": "OTP मोबाइल पर भेजा गया",
+    "enterOtp": "OTP दर्ज करें",
+    "verify": "सत्यापित करें",
+    "cancel": "रद्द करें",
+    "invalidOtp": "अमान्य OTP",
+    "expiredOtp": "OTP अवधि समाप्त",
+    "success": "भाषा सफलता से बदली गई"
+  },
+  "about": {
+    "welcome": "DevExchange में आपका स्वागत है",
+    "subtitle": "गेमिफाइड डेवलपर Q&A प्लेटफॉर्म जहां ज्ञान समुदाय से मिलता है।",
+    "description": "प्रश्न पूछने, दूसरों की मदद करने और प्रतिष्ठा हासिल करने की जगह।",
+    "getStarted": "शुरू करें →",
+    "viewQuestions": "प्रश्न देखें",
+    "features": "उपलब्ध विशेषताएं",
+    "contact": "संपर्क करें",
+    "name": "नाम",
+    "email": "ईमेल",
+    "message": "संदेश",
+    "sendMessage": "संदेश भेजें",
+    "footerText": "डेवलपर्स के लिए, डेवलपर्स द्वारा बनाया गया"
   }
 }

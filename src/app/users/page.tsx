@@ -15,7 +15,7 @@ export default function UsersPage() {
   }, []);
 
   return (
-    <div className="container max-w-5xl py-8">
+    <div className="max-w-5xl mx-auto px-6 py-6 w-full">
       <h1 className="text-3xl font-bold mb-8">{t('nav.users')}</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -29,7 +29,7 @@ export default function UsersPage() {
                 <Link href={`/profile/${u._id}`} className="font-semibold text-primary hover:underline truncate block">
                   {u.name}
                 </Link>
-                <div className="text-xs text-muted-foreground truncate">Level {u.level || 0} • {u.reputation || 0} Rep</div>
+                <div className="text-xs text-muted-foreground truncate">Level {u.level || 0} • {u.reputation || 0} {t('users.reputation')}</div>
               </div>
             </CardContent>
           </Card>

@@ -13,7 +13,7 @@ export default function SocialFeedPage() {
   const { t } = useTranslation();
 
   return (
-    <div className="container max-w-3xl py-8 mt-6">
+    <div className="max-w-5xl mx-auto px-6 py-6 w-full">
       <h1 className="text-3xl font-bold mb-6">{t('nav.community')}</h1>
       
       {user && (

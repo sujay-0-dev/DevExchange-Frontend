@@ -80,7 +80,7 @@ export default function QuestionDetailPage() {
   const isQuestionOwner = user?.id === question.author._id;
 
   return (
-    <div className="flex flex-col w-full max-w-4xl px-4 py-6 md:px-8 mx-auto">
+    <div className="max-w-5xl mx-auto px-6 py-6 w-full">
       {/* Question Header */}
       <div className="mb-6 border-b pb-4">
         <h1 className="text-3xl font-bold mb-2">{question.title}</h1>
@@ -113,7 +113,7 @@ export default function QuestionDetailPage() {
         </div>
       </div>
 
-      <h2 className="text-2xl font-semibold mb-4">{answers.length} {t('profile.answers')}</h2>
+      <h2 className="text-2xl font-semibold mb-4">{answers.length} {t('question.answers')}</h2>
 
       {/* Answers List */}
       <div className="space-y-6 mb-10">
@@ -129,12 +129,12 @@ export default function QuestionDetailPage() {
                 <div>
                   {isQuestionOwner && !answer.isAccepted && (
                     <Button variant="outline" size="sm" onClick={() => handleAcceptAnswer(answer._id)}>
-                      Accept Answer
+                      {t('question.acceptAnswer')}
                     </Button>
                   )}
                   {answer.isAccepted && (
                     <Badge className="bg-green-500 hover:bg-green-600 text-white border-transparent">
-                      Accepted Answer
+                      {t('question.accepted')}
                     </Badge>
                   )}
                 </div>
@@ -154,7 +154,7 @@ export default function QuestionDetailPage() {
 
       {/* Post Answer Form */}
       <div className="border-t pt-8">
-        <h3 className="text-xl font-semibold mb-4">Your Answer</h3>
+        <h3 className="text-xl font-semibold mb-4">{t('question.postAnswer')}</h3>
         <form onSubmit={handlePostAnswer} className="space-y-4">
           <Textarea 
             placeholder="Write your answer here..." 
@@ -164,7 +164,7 @@ export default function QuestionDetailPage() {
             required
           />
           <Button type="submit" disabled={submitting || !user}>
-            {submitting ? 'Posting...' : 'Post Your Answer'}
+            {submitting ? t('common.loading') : t('question.submitAnswer')}
           </Button>
           {!user && (
             <p className="text-sm text-destructive mt-2">You must be logged in to post an answer.</p>

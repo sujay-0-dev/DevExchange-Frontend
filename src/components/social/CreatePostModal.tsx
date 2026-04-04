@@ -16,8 +16,10 @@ import { useFriends } from '@/hooks/useFriends';
 import { PostLimitBanner } from './PostLimitBanner';
 import api from '@/lib/api';
 import { toast } from 'sonner';
+import { useTranslation } from 'react-i18next';
 
 export function CreatePostModal({ onPostCreated }: { onPostCreated?: () => void }) {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState('');
   const [files, setFiles] = useState<File[]>([]);
@@ -72,7 +74,7 @@ export function CreatePostModal({ onPostCreated }: { onPostCreated?: () => void 
       </DialogTrigger>
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
-          <DialogTitle>Create Post</DialogTitle>
+          <DialogTitle>{t('community.createPost')}</DialogTitle>
           <DialogDescription>
             Share photos, videos, and thoughts with the community.
           </DialogDescription>

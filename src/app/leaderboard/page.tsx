@@ -29,7 +29,7 @@ export default function LeaderboardPage() {
   }, []);
 
   return (
-    <div className="container max-w-4xl mx-auto py-12 px-4">
+    <div className="max-w-5xl mx-auto px-6 py-6 w-full">
       <div className="text-center mb-10">
         <h1 className="text-4xl font-extrabold tracking-tight mb-3">
           🏆 {t('nav.leaderboard')}

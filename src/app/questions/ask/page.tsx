@@ -53,10 +53,10 @@ export default function AskQuestionPage() {
   };
 
   return (
-    <div className="flex h-full w-full max-w-3xl mx-auto items-start justify-center px-4 py-8">
+    <div className="max-w-5xl mx-auto px-6 py-6 w-full">
       <Card className="w-full">
         <CardHeader>
-          <CardTitle className="text-2xl">{t('questions.askQuestion')}</CardTitle>
+          <CardTitle className="text-2xl">{t('home.askQuestion')}</CardTitle>
           <CardDescription>
             Be specific and imagine you're asking a question to another person.
           </CardDescription>
@@ -64,7 +64,7 @@ export default function AskQuestionPage() {
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
-              <label htmlFor="title" className="font-semibold text-sm">Title</label>
+              <label htmlFor="title" className="font-semibold text-sm">{t('question.title')}</label>
               <p className="text-xs text-muted-foreground">
                 Be specific and imagine you're asking a question to another person.
               </p>
@@ -78,7 +78,7 @@ export default function AskQuestionPage() {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="description" className="font-semibold text-sm">What are the details of your problem?</label>
+              <label htmlFor="description" className="font-semibold text-sm">{t('question.description')}</label>
               <p className="text-xs text-muted-foreground">
                 Introduce the problem and expand on what you put in the title. Minimum 20 characters.
               </p>
@@ -94,7 +94,7 @@ export default function AskQuestionPage() {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="tags" className="font-semibold text-sm">Tags</label>
+              <label htmlFor="tags" className="font-semibold text-sm">{t('question.tags')}</label>
               <p className="text-xs text-muted-foreground">
                 Add up to 5 tags to describe what your question is about (comma separated).
               </p>
@@ -107,7 +107,7 @@ export default function AskQuestionPage() {
             </div>
 
             <Button type="submit" disabled={submitting} className="w-full sm:w-auto">
-              {submitting ? 'Posting...' : 'Post your question'}
+              {submitting ? t('common.loading') : t('question.submit')}
             </Button>
           </form>
         </CardContent>

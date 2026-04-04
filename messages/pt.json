@@ -1,5 +1,6 @@
 {
   "nav": {
+    "about": "Sobre",
     "questions": "Perguntas",
     "tags": "Tags",
     "users": "Usuários",
@@ -8,54 +9,100 @@
     "leaderboard": "Placar",
     "pricing": "Preços",
     "login": "Entrar",
-    "signup": "Cadastrar"
+    "signup": "Cadastrar-se",
+    "logout": "Sair",
+    "profile": "Perfil",
+    "searchPlaceholder": "Procurar perguntas..."
   },
-  "auth": {
-    "login": "Entrar",
-    "email": "E-mail",
-    "password": "Senha",
-    "forgotPassword": "Esqueceu a senha?",
-    "noAccount": "Não tem uma conta?",
-    "signUp": "Cadastrar",
-    "logout": "Sair"
-  },
-  "questions": {
+  "home": {
+    "topQuestions": "Principais Perguntas",
     "askQuestion": "Fazer Pergunta",
-    "searchPlaceholder": "Buscar perguntas...",
     "noQuestions": "Nenhuma pergunta encontrada",
+    "votes": "votos",
+    "answers": "respostas",
     "postedBy": "Postado por",
-    "answers": "Respostas",
-    "views": "Visualizações",
-    "votes": "Votos",
-    "tags": "Tags"
+    "ago": "atrás"
   },
-  "language": {
-    "selectLanguage": "Selecionar Idioma",
-    "verificationRequired": "Verificação Necessária",
-    "otpSentEmail": "Um OTP foi enviado para o seu e-mail",
-    "otpSentMobile": "Um OTP foi enviado para o seu celular",
-    "enterOtp": "Digite o OTP",
-    "verify": "Verificar e Trocar",
-    "cancel": "Cancelar",
-    "invalidOtp": "OTP inválido. Tente novamente.",
-    "expiredOtp": "O OTP expirou.",
-    "success": "Idioma alterado com sucesso!",
-    "switchingTo": "Mudando para"
+  "question": {
+    "title": "Título",
+    "description": "Descrição",
+    "tags": "Tags",
+    "submit": "Enviar Pergunta",
+    "answers": "Respostas",
+    "postAnswer": "Poste sua Resposta",
+    "submitAnswer": "Enviar Resposta",
+    "acceptAnswer": "Aceitar Resposta",
+    "accepted": "Aceito",
+    "noAnswers": "Sem respostas ainda."
   },
   "profile": {
     "points": "Pontos",
     "reputation": "Reputação",
     "badges": "Emblemas",
-    "questions": "Perguntas",
-    "answers": "Respostas",
+    "questions": "Perguntas Feitas",
+    "answers": "Respostas Dadas",
     "transferPoints": "Transferir Pontos",
-    "history": "Histórico"
+    "loginHistory": "Histórico de Login",
+    "memberSince": "Membro desde",
+    "editProfile": "Editar Perfil"
   },
-  "subscription": {
+  "login": {
+    "title": "Entrar",
+    "subtitle": "Insira seu e-mail para entrar",
+    "email": "E-mail",
+    "password": "Senha",
+    "forgotPassword": "Esqueceu a senha?",
+    "loginButton": "Entrar",
+    "noAccount": "Não tem uma conta?",
+    "signUp": "Cadastrar"
+  },
+  "register": {
+    "title": "Criar Conta",
+    "name": "Nome Completo",
+    "email": "E-mail",
+    "password": "Senha",
+    "phone": "Telefone",
+    "registerButton": "Cadastrar-se",
+    "hasAccount": "Já tem uma conta?",
+    "login": "Entrar"
+  },
+  "pricing": {
+    "title": "Escolha seu Plano",
+    "subtitle": "Faça upgrade para postar mais",
+    "free": "Grátis",
+    "bronze": "Bronze",
+    "silver": "Prata",
+    "gold": "Ouro",
+    "perMonth": "/mês",
+    "questionsPerDay": "perguntas por dia",
+    "unlimited": "Ilimitado",
     "currentPlan": "Plano Atual",
     "upgrade": "Fazer Upgrade",
-    "questionsLeft": "Perguntas restantes hoje",
-    "limitReached": "Limite alcançado. Faça upgrade."
+    "paymentWindow": "Pagamentos: 10:00 AM – 11:00 AM IST"
+  },
+  "leaderboard": {
+    "title": "Placar",
+    "rank": "Rank",
+    "user": "Usuário",
+    "points": "Pontos",
+    "level": "Nível"
+  },
+  "community": {
+    "title": "Espaço da Comunidade",
+    "createPost": "Criar Post",
+    "like": "Curtir",
+    "comment": "Comentar",
+    "share": "Compartilhar",
+    "noFriends": "Adicione 1 amigo para postar",
+    "limitReached": "Limite atingido"
+  },
+  "tags": {
+    "title": "Tags",
+    "questions": "perguntas"
+  },
+  "users": {
+    "title": "Usuários",
+    "reputation": "reputação"
   },
   "common": {
     "save": "Salvar",
@@ -64,7 +111,37 @@
     "edit": "Editar",
     "submit": "Enviar",
     "loading": "Carregando...",
-    "error": "Algo deu errado",
-    "success": "Sucesso"
+    "error": "Erro",
+    "success": "Sucesso",
+    "close": "Fechar",
+    "back": "Voltar",
+    "next": "Próximo",
+    "search": "Buscar"
+  },
+  "language": {
+    "selectLanguage": "Selecionar Idioma",
+    "verificationRequired": "Verificação Necessária",
+    "otpSentEmail": "OTP enviado ao e-mail",
+    "otpSentMobile": "OTP enviado ao celular",
+    "enterOtp": "Inserir OTP",
+    "verify": "Verificar",
+    "cancel": "Cancelar",
+    "invalidOtp": "OTP inválido",
+    "expiredOtp": "OTP expirado",
+    "success": "Idioma trocado"
+  },
+  "about": {
+    "welcome": "Bem-vindo ao DevExchange",
+    "subtitle": "A plataforma gamificada de P&R onde o conhecimento encontra a comunidade.",
+    "description": "Um lugar para fazer perguntas, ajudar os outros e ganhar reputação.",
+    "getStarted": "Começar →",
+    "viewQuestions": "Ver Perguntas",
+    "features": "Recursos Disponíveis",
+    "contact": "Fale Conosco",
+    "name": "Nome",
+    "email": "E-mail",
+    "message": "Mensagem",
+    "sendMessage": "Enviar Mensagem",
+    "footerText": "Construído para desenvolvedores, por desenvolvedores"
   }
 }

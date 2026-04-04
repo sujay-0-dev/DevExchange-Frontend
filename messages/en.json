@@ -1,5 +1,6 @@
 {
   "nav": {
+    "about": "About",
     "questions": "Questions",
     "tags": "Tags",
     "users": "Users",
@@ -8,54 +9,100 @@
     "leaderboard": "Leaderboard",
     "pricing": "Pricing",
     "login": "Log In",
-    "signup": "Sign Up"
+    "signup": "Sign Up",
+    "logout": "Logout",
+    "profile": "Profile",
+    "searchPlaceholder": "Search questions..."
   },
-  "auth": {
-    "login": "Login",
-    "email": "Email",
-    "password": "Password",
-    "forgotPassword": "Forgot password?",
-    "noAccount": "Don't have an account?",
-    "signUp": "Sign up",
-    "logout": "Logout"
-  },
-  "questions": {
+  "home": {
+    "topQuestions": "Top Questions",
     "askQuestion": "Ask Question",
-    "searchPlaceholder": "Search questions...",
     "noQuestions": "No questions found",
+    "votes": "votes",
+    "answers": "answers",
     "postedBy": "Posted by",
-    "answers": "Answers",
-    "views": "Views",
-    "votes": "Votes",
-    "tags": "Tags"
+    "ago": "ago"
   },
-  "language": {
-    "selectLanguage": "Select Language",
-    "verificationRequired": "Verification Required",
-    "otpSentEmail": "An OTP has been sent to your email address",
-    "otpSentMobile": "An OTP has been sent to your mobile number",
-    "enterOtp": "Enter OTP",
-    "verify": "Verify & Switch",
-    "cancel": "Cancel",
-    "invalidOtp": "Invalid OTP. Please try again.",
-    "expiredOtp": "OTP has expired.",
-    "success": "Language switched successfully!",
-    "switchingTo": "Switching to"
+  "question": {
+    "title": "Title",
+    "description": "Description",
+    "tags": "Tags",
+    "submit": "Post Question",
+    "answers": "Answers",
+    "postAnswer": "Post Your Answer",
+    "submitAnswer": "Submit Answer",
+    "acceptAnswer": "Accept Answer",
+    "accepted": "Accepted",
+    "noAnswers": "No answers yet. Be the first to answer!"
   },
   "profile": {
     "points": "Points",
     "reputation": "Reputation",
     "badges": "Badges",
-    "questions": "Questions",
-    "answers": "Answers",
+    "questions": "Questions Asked",
+    "answers": "Answers Given",
     "transferPoints": "Transfer Points",
-    "history": "History"
+    "loginHistory": "Login History",
+    "memberSince": "Member Since",
+    "editProfile": "Edit Profile"
   },
-  "subscription": {
+  "login": {
+    "title": "Login",
+    "subtitle": "Enter your email below to login to your account",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot password?",
+    "loginButton": "Login",
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign up"
+  },
+  "register": {
+    "title": "Create Account",
+    "name": "Full Name",
+    "email": "Email",
+    "password": "Password",
+    "phone": "Phone Number",
+    "registerButton": "Sign Up",
+    "hasAccount": "Already have an account?",
+    "login": "Log in"
+  },
+  "pricing": {
+    "title": "Choose Your Plan",
+    "subtitle": "Upgrade to post more questions every day",
+    "free": "Free",
+    "bronze": "Bronze",
+    "silver": "Silver",
+    "gold": "Gold",
+    "perMonth": "/month",
+    "questionsPerDay": "questions per day",
+    "unlimited": "Unlimited",
     "currentPlan": "Current Plan",
     "upgrade": "Upgrade",
-    "questionsLeft": "Questions remaining today",
-    "limitReached": "Daily limit reached. Upgrade to post more."
+    "paymentWindow": "Payments accepted: 10:00 AM – 11:00 AM IST only"
+  },
+  "leaderboard": {
+    "title": "Leaderboard",
+    "rank": "Rank",
+    "user": "User",
+    "points": "Points",
+    "level": "Level"
+  },
+  "community": {
+    "title": "Community Space",
+    "createPost": "Create Post",
+    "like": "Like",
+    "comment": "Comment",
+    "share": "Share",
+    "noFriends": "Add at least 1 friend to post",
+    "limitReached": "Daily post limit reached"
+  },
+  "tags": {
+    "title": "Tags",
+    "questions": "questions"
+  },
+  "users": {
+    "title": "Users",
+    "reputation": "reputation"
   },
   "common": {
     "save": "Save",
@@ -65,6 +112,36 @@
     "submit": "Submit",
     "loading": "Loading...",
     "error": "Something went wrong",
-    "success": "Success"
+    "success": "Success",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "search": "Search"
+  },
+  "language": {
+    "selectLanguage": "Select Language",
+    "verificationRequired": "Verification Required",
+    "otpSentEmail": "OTP sent to your email",
+    "otpSentMobile": "OTP sent to your mobile",
+    "enterOtp": "Enter OTP",
+    "verify": "Verify & Switch",
+    "cancel": "Cancel",
+    "invalidOtp": "Invalid OTP",
+    "expiredOtp": "OTP expired",
+    "success": "Language switched successfully"
+  },
+  "about": {
+    "welcome": "Welcome to DevExchange",
+    "subtitle": "The Gamified Developer Q&A Platform where knowledge meets community.",
+    "description": "A place to ask questions, help others, and earn reputation. Let's build the best developer ecosystem together.",
+    "getStarted": "Get Started →",
+    "viewQuestions": "View Questions",
+    "features": "Available Features",
+    "contact": "Contact Us",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "sendMessage": "Send Message",
+    "footerText": "Built for developers, by developers"
   }
 }

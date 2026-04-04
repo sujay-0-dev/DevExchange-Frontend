@@ -1,61 +1,108 @@
 {
   "nav": {
+    "about": "Acerca de",
     "questions": "Preguntas",
     "tags": "Etiquetas",
     "users": "Usuarios",
     "badges": "Insignias",
     "community": "Espacio Comunitario",
-    "leaderboard": "Tabla de Clasificación",
+    "leaderboard": "Clasificación",
     "pricing": "Precios",
     "login": "Iniciar Sesión",
-    "signup": "Registrarse"
+    "signup": "Registrarse",
+    "logout": "Cerrar sesión",
+    "profile": "Perfil",
+    "searchPlaceholder": "Buscar preguntas..."
   },
-  "auth": {
-    "login": "Iniciar Sesión",
-    "email": "Correo Electrónico",
-    "password": "Contraseña",
-    "forgotPassword": "¿Olvidaste tu contraseña?",
-    "noAccount": "¿No tienes una cuenta?",
-    "signUp": "Únete",
-    "logout": "Cerrar Sesión"
-  },
-  "questions": {
+  "home": {
+    "topQuestions": "Preguntas Principales",
     "askQuestion": "Hacer Pregunta",
-    "searchPlaceholder": "Buscar preguntas...",
     "noQuestions": "No se encontraron preguntas",
+    "votes": "votos",
+    "answers": "respuestas",
     "postedBy": "Publicado por",
-    "answers": "Respuestas",
-    "views": "Vistas",
-    "votes": "Votos",
-    "tags": "Etiquetas"
+    "ago": "hace"
   },
-  "language": {
-    "selectLanguage": "Seleccionar Idioma",
-    "verificationRequired": "Verificación Requerida",
-    "otpSentEmail": "Se ha enviado un OTP a su correo electrónico",
-    "otpSentMobile": "Se ha enviado un OTP a su número de teléfono",
-    "enterOtp": "Ingrese el OTP",
-    "verify": "Verificar y Cambiar",
-    "cancel": "Cancelar",
-    "invalidOtp": "OTP inválido. Por favor, inténtelo de nuevo.",
-    "expiredOtp": "El OTP ha expirado.",
-    "success": "¡Idioma cambiado con éxito!",
-    "switchingTo": "Cambiando a"
+  "question": {
+    "title": "Título",
+    "description": "Descripción",
+    "tags": "Etiquetas",
+    "submit": "Publicar Pregunta",
+    "answers": "Respuestas",
+    "postAnswer": "Publicar Respuesta",
+    "submitAnswer": "Enviar Respuesta",
+    "acceptAnswer": "Aceptar Respuesta",
+    "accepted": "Aceptado",
+    "noAnswers": "Aún no hay respuestas. ¡Sé el primero!"
   },
   "profile": {
     "points": "Puntos",
     "reputation": "Reputación",
     "badges": "Insignias",
-    "questions": "Preguntas",
-    "answers": "Respuestas",
+    "questions": "Preguntas Realizadas",
+    "answers": "Respuestas Dadas",
     "transferPoints": "Transferir Puntos",
-    "history": "Historial"
+    "loginHistory": "Historial de inicio",
+    "memberSince": "Miembro desde",
+    "editProfile": "Editar Perfil"
   },
-  "subscription": {
+  "login": {
+    "title": "Iniciar Sesión",
+    "subtitle": "Ingresa tu correo para iniciar sesión",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "loginButton": "Iniciar Sesión",
+    "noAccount": "¿No tienes una cuenta?",
+    "signUp": "Únete"
+  },
+  "register": {
+    "title": "Crear Cuenta",
+    "name": "Nombre Completo",
+    "email": "Correo",
+    "password": "Contraseña",
+    "phone": "Teléfono",
+    "registerButton": "Regístrate",
+    "hasAccount": "¿Ya tienes cuenta?",
+    "login": "Iniciar Sesión"
+  },
+  "pricing": {
+    "title": "Elige tu Plan",
+    "subtitle": "Mejora para publicar más preguntas",
+    "free": "Gratis",
+    "bronze": "Bronce",
+    "silver": "Plata",
+    "gold": "Oro",
+    "perMonth": "/mes",
+    "questionsPerDay": "preguntas por día",
+    "unlimited": "Ilimitado",
     "currentPlan": "Plan Actual",
     "upgrade": "Mejorar",
-    "questionsLeft": "Preguntas restantes hoy",
-    "limitReached": "Límite diario alcanzado. Mejora tu plan."
+    "paymentWindow": "Pagos: 10:00 AM – 11:00 AM IST"
+  },
+  "leaderboard": {
+    "title": "Clasificación",
+    "rank": "Rango",
+    "user": "Usuario",
+    "points": "Puntos",
+    "level": "Nivel"
+  },
+  "community": {
+    "title": "Espacio Comunitario",
+    "createPost": "Crear Publicación",
+    "like": "Me gusta",
+    "comment": "Comentar",
+    "share": "Compartir",
+    "noFriends": "Agrega al menos 1 amigo para publicar",
+    "limitReached": "Límite diario alcanzado"
+  },
+  "tags": {
+    "title": "Etiquetas",
+    "questions": "preguntas"
+  },
+  "users": {
+    "title": "Usuarios",
+    "reputation": "reputación"
   },
   "common": {
     "save": "Guardar",
@@ -64,7 +111,37 @@
     "edit": "Editar",
     "submit": "Enviar",
     "loading": "Cargando...",
-    "error": "Algo salió mal",
-    "success": "Éxito"
+    "error": "Ocurrió un error",
+    "success": "Éxito",
+    "close": "Cerrar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "search": "Buscar"
+  },
+  "language": {
+    "selectLanguage": "Seleccionar Idioma",
+    "verificationRequired": "Verificación Requerida",
+    "otpSentEmail": "OTP enviado a tu correo",
+    "otpSentMobile": "OTP enviado a tu celular",
+    "enterOtp": "Ingresar OTP",
+    "verify": "Verificar y Cambiar",
+    "cancel": "Cancelar",
+    "invalidOtp": "OTP inválido",
+    "expiredOtp": "OTP vencido",
+    "success": "Idioma cambiado exitosamente"
+  },
+  "about": {
+    "welcome": "Bienvenido a DevExchange",
+    "subtitle": "La plataforma gamificada de preguntas y respuestas donde el conocimiento rige la comunidad.",
+    "description": "Un lugar para hacer preguntas, ayudar y ganar reputación. Construyamos el mejor ecosistema corporativo.",
+    "getStarted": "Empezar →",
+    "viewQuestions": "Ver Preguntas",
+    "features": "Funciones Disponibles",
+    "contact": "Contáctanos",
+    "name": "Nombre",
+    "email": "Correo",
+    "message": "Mensaje",
+    "sendMessage": "Enviar Mensaje",
+    "footerText": "Construido para desarrolladores, por desarrolladores"
   }
 }

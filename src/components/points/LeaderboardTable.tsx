@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useTranslation } from "react-i18next";
 
 interface LeaderboardUser {
   _id: string;
@@ -11,6 +12,7 @@ interface LeaderboardUser {
 }
 
 export function LeaderboardTable({ users }: { users: LeaderboardUser[] }) {
+  const { t } = useTranslation();
   const getMedal = (index: number) => {
     switch (index) {
       case 0: return "🥇";
@@ -26,10 +28,10 @@ export function LeaderboardTable({ users }: { users: LeaderboardUser[] }) {
         <table className="w-full text-sm text-left">
           <thead className="bg-muted uppercase text-muted-foreground border-b text-xs font-semibold">
             <tr>
-              <th className="px-4 py-3 text-center w-16">#</th>
-              <th className="px-4 py-3">User</th>
-              <th className="px-4 py-3 text-right">Points</th>
-              <th className="px-4 py-3 text-center w-24">Level</th>
+              <th className="px-4 py-3 text-center w-16">{t('leaderboard.rank')}</th>
+              <th className="px-4 py-3">{t('leaderboard.user')}</th>
+              <th className="px-4 py-3 text-right">{t('leaderboard.points')}</th>
+              <th className="px-4 py-3 text-center w-24">{t('leaderboard.level')}</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-border">
